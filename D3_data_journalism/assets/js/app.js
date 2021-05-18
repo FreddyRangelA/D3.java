@@ -29,7 +29,7 @@ d3.csv("assets/data/data.csv").then(function(povertyData){
     // Step 2: Create scale functions
     // ==============================
     var xLinearScale= d3.scaleLinear().domain([8, d3.max(povertyData, d=>d.poverty)]).range([0,width]);
-    var yLinearScale= d3.scaleLinear().domain([0, d3.max(povertyData, d=>d.healthcare)]).range([height, 2]);
+    var yLinearScale= d3.scaleLinear().domain([0, d3.max(povertyData, d=>d.healthcare)]).range([height, 0]);
 
     // Step 3: Create axis functions
     // ==============================
@@ -59,7 +59,7 @@ d3.csv("assets/data/data.csv").then(function(povertyData){
     // ==============================
     var toolTip = d3.tip()
       .attr("class", "tooltip")
-      .offset([80, -60])
+      .offset([0, 0])
       .html(function(d) {
         return (`${d.abbr}`);
       });
