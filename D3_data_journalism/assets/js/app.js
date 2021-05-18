@@ -28,8 +28,8 @@ d3.csv("assets/data/data.csv").then(function(povertyData){
     });
     // Step 2: Create scale functions
     // ==============================
-    var xLinearScale= d3.scaleLinear().domain([20, d3.max(povertyData, d=>d.poverty)]).range([0,width]);
-    var yLinearScale= d3.scaleLinear().domain([0, d3.max(povertyData, d=>d.healthcare)]).range([height, 0]);
+    var xLinearScale= d3.scaleLinear().domain([8, d3.max(povertyData, d=>d.poverty)]).range([0,width]);
+    var yLinearScale= d3.scaleLinear().domain([0, d3.max(povertyData, d=>d.healthcare)]).range([height, 2]);
 
     // Step 3: Create axis functions
     // ==============================
@@ -88,9 +88,9 @@ d3.csv("assets/data/data.csv").then(function(povertyData){
         .text("Lacks Helthcare(%)");
 
         chartGroup.append("text")
-        .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
+        .attr("transform", `translate(${width / 2}, ${height + margin.top +20})`)
         .attr("class", "axisText")
-        .text("Hair Metal Band Hair Length (inches)");
+        .text("In Poverty (%)");
     }).catch(function(error) {
     console.log(error);
     });
