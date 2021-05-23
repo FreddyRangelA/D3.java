@@ -52,9 +52,10 @@ d3.csv("assets/data/data.csv").then(function(povertyData){
     .attr("cy", d => yLinearScale(d.healthcare))
     .attr("r", "15")
     .attr("fill", "cyan")
-    //.attr("text",d=>centerText(d.abbr))
+    
     .attr("opacity", ".5");
 
+    chartGroup.selectAll("lable").data(povertyData).enter().append("text").text(d=>d.abbr).attr("dx", d => xLinearScale(d.poverty)).attr("dy", d => yLinearScale(d.healthcare)).attr("text-anchor","middle");
     // Step 6: Initialize tool tip
     // ==============================
     var toolTip = d3.tip()
