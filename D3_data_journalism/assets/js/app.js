@@ -1,11 +1,11 @@
 // @TODO: YOUR CODE HERE!
 
 var svgWidth=960;
-var svgHeight=700;
+var svgHeight=500;
 var margin={
     top: 20,
     right: 40,
-    bottom: 80,
+    bottom: 70,
     left:100
 };
 
@@ -18,7 +18,7 @@ var svg = d3.select("#scatter").append("svg").attr("width",svgWidth).attr("heigh
 var chartGroup= svg.append("g").attr("transform",`translate(${margin.left},${margin.right})`);
 
 // Import Data
-d3.csv("assets/data/data.csv").then(function(povertyData){
+d3.csv("data/data.csv").then(function(povertyData){
     // Step 1: Parse Data/Cast as numbers
     // ==============================
     povertyData.forEach(function(data) {
@@ -28,8 +28,8 @@ d3.csv("assets/data/data.csv").then(function(povertyData){
     });
     // Step 2: Create scale functions
     // ==============================
-    var xLinearScale= d3.scaleLinear().domain([8, d3.max(povertyData, d=>d.poverty)]).range([0,width]);
-    var yLinearScale= d3.scaleLinear().domain([0, d3.max(povertyData, d=>d.healthcare)]).range([height, 0]);
+    var xLinearScale= d3.scaleLinear().domain([6, d3.max(povertyData, d=>d.poverty)]).range([0,width]);
+    var yLinearScale= d3.scaleLinear().domain([0, d3.max(povertyData, d=>d.healthcare)]).range([height, 8]);
 
     // Step 3: Create axis functions
     // ==============================
