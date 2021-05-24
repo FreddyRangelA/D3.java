@@ -1,11 +1,11 @@
 // @TODO: YOUR CODE HERE!
 
 var svgWidth=960;
-var svgHeight=500;
+var svgHeight=700;
 var margin={
     top: 20,
     right: 40,
-    bottom: 60,
+    bottom: 80,
     left:100
 };
 
@@ -89,7 +89,7 @@ d3.csv("assets/data/data.csv").then(function(povertyData){
         .text("Lacks Helthcare(%)");
 
         chartGroup.append("text")
-        .attr("transform", `translate(${width / 2}, ${height + margin.top +20})`)
+        .attr("transform", `translate(${width / 2}, ${height + margin.top +10})`)
         .attr("class", "axisText")
         .text("In Poverty (%)");
     }).catch(function(error) {
