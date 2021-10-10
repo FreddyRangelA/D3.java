@@ -1,5 +1,10 @@
 # D3-Challenge
 
+About the project:
+It was required to analyze the current trends shaping people's lives, as well as creating charts, graphs, and interactive elements to help readers understand your findings.
+
+The data set included with the project is based on 2014 ACS 1-year estimates from the US Census Bureau. The current data set includes data on rates of income, obesity, poverty, etc. by state. MOE stands for "margin of error."
+
 For this activity it was required to create a scatter plot between two of the data variables such as Healthcare vs. Poverty or Smokers vs. Age.
 
 Using the D3 techniques the following was accomplished.
